@@ -14,18 +14,40 @@
   justify-content: center;
 }
 .title {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 .text {
   font-size: 3rem;
+  margin-bottom: 50px;
 }
-.number {
+.computer-number {
   color: black;
   background-color: #ffffff;
-  width: 200px;
-  height: 200px;
-  font-size: 160px;
+  width: 150px;
+  height: 150px;
+  font-size: 120px;
   text-align: center;
+  margin-bottom: 150px;
+}
+.computer-number::before {
+  content: "";
+  display: block;
+  position: relative;
+  right: 250px;
+  top: 70px;
+  width: 250px;
+  height: 10px;
+  background-color: #ffffff;
+}
+.computer-number::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 150px;
+  bottom: 85px;
+  width: 250px;
+  height: 10px;
+  background-color: #ffffff;
 }
 .container {
   display: flex;
@@ -35,21 +57,61 @@
   display: flex;
   flex-direction: column;
 }
-.again-button {
+.button {
   border: 0;
-  width: 200px;
-  height: 100px;
-  position: relative;
-  font-size: 50px;
   background-color: #ffffff;
+}
+.again-button {
+  width: 150px;
+  height: 70px;
+  position: relative;
+  font-size: 40px;
+  top: 50px;
+  right: 50px;
+  color: #000000;
+}
+.again-button:hover {
+  cursor: pointer;
+  background-color: #303030;
+  color: #ffffff;
+}
+.again-button:active {
+  background-color: #ffffff;
+  color: #000000;
 }
 .your-number {
   border: 0;
-  width: 150px;
-  height: 150px;
-  font-size: 100px;
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
   text-align: center;
+  position: relative;
+  right: 20px;
+  bottom: 100px;
 }
 .check-button {
-  border: 0;
+  width: 70px;
+  height: 70px;
+  font-size: 20px;
+  position: relative;
+  right: 5px;
+  bottom: 50px;
+}
+.check-button:hover {
+  cursor: pointer;
+  background-color: #303030;
+  color: #ffffff;
+}
+.check-button:active {
+  background-color: #ffffff;
+  color: #000000;
+}
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 15px;
+  position: relative;
+  bottom: 80px;
+  right: 50px;
 }
