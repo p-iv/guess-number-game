@@ -1,3 +1,3 @@
 # guess-number-game
 
-http://127.0.0.1:3000/index.html
+https://p-iv.github.io/guess-number-game/
