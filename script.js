@@ -23,7 +23,7 @@ check_button.addEventListener("click", function () {
 
   checkResult(my_number);
 
-  changeResult(my_number);
+  changeScore(my_number);
 
   changeBackground(my_number);
 
@@ -47,7 +47,7 @@ function checkResult(my_number) {
   }
 }
 
-function changeResult(my_number) {
+function changeScore(my_number) {
   if (my_number !== random_number) {
     totalScore -= 1;
     score.textContent = totalScore;
