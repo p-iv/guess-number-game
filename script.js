@@ -14,6 +14,8 @@ const container = document.querySelector(".main-container");
 
 const title = document.querySelector(".title");
 
+const again_button = document.querySelector(".again-button");
+
 let totalScore = 10;
 
 check_button.addEventListener("click", function () {
@@ -26,6 +28,10 @@ check_button.addEventListener("click", function () {
   changeBackground(my_number);
 
   youLoose(totalScore);
+});
+
+again_button.addEventListener("click", function () {
+  location.reload();
 });
 
 function checkResult(my_number) {
@@ -60,7 +66,7 @@ function changeBackground(my_number) {
 
 function youLoose(totalScore) {
   if (totalScore === 0) {
-    container.textContent = "You Loose!!!";
+    title.textContent = "You Loose!!!";
     container.classList.add("youLoose");
   }
 }
