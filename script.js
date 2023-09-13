@@ -1,26 +1,66 @@
-let computer_number = document.querySelector(".number");
+const computer_number = document.querySelector(".number");
 
-let random_number = Math.floor(Math.random() * 20 + 1);
+const random_number = Math.trunc(Math.random() * 20) + 1;
 
-let my_number = document.querySelector(".your-number").value;
+const my_number = Number(document.querySelector(".your-number").value);
 
-let check_button = document.querySelector(".check-button");
+const check_button = document.querySelector(".check-button");
 
-let result = document.querySelector(".result");
+const result = document.querySelector(".result");
 
-computer_number.innerHTML = random_number;
+const score = document.querySelector(".score");
 
-console.log(my_number);
+const container = document.querySelector(".main-container");
+
+const title = document.querySelector(".title");
+
+let totalScore = 10;
+
 check_button.addEventListener("click", function () {
-  change_result(random_number);
+  let my_number = Number(document.querySelector(".your-number").value);
+
+  checkResult(my_number);
+
+  changeResult(my_number);
+
+  changeBackground(my_number);
+
+  youLoose(totalScore);
 });
 
-function change_result(random_number) {
-  if (my_number.value > random_number) {
-    result.innerHTML = "too high";
-  } else if (my_number.value < random_number) {
-    result.innerHTML = "too low";
+function checkResult(my_number) {
+  if (!my_number) {
+    result.textContent = "not a number!!!";
+  } else if (my_number === random_number) {
+    result.textContent = "correct number";
+    computer_number.textContent = random_number;
+  } else if (my_number > random_number) {
+    result.textContent = "too high";
   } else {
-    result.innerHTML = "correct number";
+    result.textContent = "too low";
+  }
+}
+
+function changeResult(my_number) {
+  if (my_number !== random_number) {
+    totalScore -= 1;
+    score.textContent = totalScore;
+  } else if (my_number === random_number) {
+    totalScore += 5;
+    score.textContent = totalScore;
+  }
+}
+
+function changeBackground(my_number) {
+  if (my_number === random_number) {
+    container.classList.add("changeBackground");
+    title.textContent = "Correct!!!";
+  }
+}
+
+function youLoose(totalScore) {
+  if (totalScore === 0) {
+    container.textContent = "You Loose!!!";
+    container.classList.add("youLoose");
   }
 }

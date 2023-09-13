@@ -6,7 +6,7 @@
 .main-container {
   width: 100%;
   height: 100vh;
-  background-color: #303030;
+  background-color: #202020;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -78,6 +78,13 @@
 .again-button:active {
   background-color: #ffffff;
   color: #000000;
+}
+.changeBackground {
+  background-color: rgb(36, 221, 36);
+}
+.youLoose {
+  background-color: rgb(143, 15, 15);
+  font-size: 4rem;
 }
 .your-number {
   border: 0;
