@@ -52,6 +52,8 @@
 .container {
   display: flex;
   gap: 100px;
+  position: relative;
+  left: 125px;
 }
 .input-container {
   display: flex;
@@ -60,31 +62,6 @@
 .button {
   border: 0;
   background-color: #ffffff;
-}
-.again-button {
-  width: 150px;
-  height: 70px;
-  position: relative;
-  font-size: 40px;
-  top: 50px;
-  right: 50px;
-  color: #000000;
-}
-.again-button:hover {
-  cursor: pointer;
-  background-color: #303030;
-  color: #ffffff;
-}
-.again-button:active {
-  background-color: #ffffff;
-  color: #000000;
-}
-.changeBackground {
-  background-color: rgb(36, 221, 36);
-}
-.youLoose {
-  background-color: rgb(143, 15, 15);
-  font-size: 4rem;
 }
 .your-number {
   border: 0;
@@ -121,4 +98,90 @@
   position: relative;
   bottom: 80px;
   right: 50px;
+}
+.win-modal-window {
+  background-color: #ffffff;
+  color: #000000;
+  position: fixed;
+  width: 300px;
+  height: 250px;
+  text-align: center;
+  border-radius: 30px;
+  z-index: 2;
+}
+.win-modal-title {
+  color: rgb(36, 221, 36);
+  margin-top: 30px;
+}
+.win-modal-text {
+  margin-top: 15px;
+}
+.win-again-button {
+  border: 0;
+  width: 130px;
+  height: 50px;
+  font-size: 2rem;
+  margin-top: 60px;
+  background-color: #ffffff;
+  color: rgb(36, 221, 36);
+}
+.win-again-button:hover {
+  background-color: rgb(36, 221, 36);
+  cursor: pointer;
+  color: #ffffff;
+}
+.win-again-button:active {
+  background-color: #ffffff;
+  color: rgb(36, 221, 36);
+}
+
+.loose-modal-window {
+  background-color: #ffffff;
+  color: #000000;
+  position: fixed;
+  width: 300px;
+  height: 250px;
+  text-align: center;
+  border-radius: 30px;
+  z-index: 2;
+}
+.loose-modal-title {
+  color: rgb(143, 15, 15);
+  margin-top: 30px;
+}
+.loose-modal-text {
+  margin-top: 15px;
+}
+.loose-again-button {
+  border: 0;
+  width: 130px;
+  height: 50px;
+  font-size: 2rem;
+  margin-top: 60px;
+  background-color: #ffffff;
+  color: rgb(143, 15, 15);
+}
+.loose-again-button:hover {
+  background-color: rgb(143, 15, 15);
+  cursor: pointer;
+  color: #ffffff;
+}
+.loose-again-button:active {
+  background-color: #ffffff;
+  color: rgb(143, 15, 15);
+}
+.hidden {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 1;
 }

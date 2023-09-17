@@ -14,9 +14,21 @@ const container = document.querySelector(".main-container");
 
 const title = document.querySelector(".title");
 
-const again_button = document.querySelector(".again-button");
+const win_again_button = document.querySelector(".win-again-button");
 
-let totalScore = 10;
+const loose_again_button = document.querySelector(".loose-again-button");
+
+const win_modal = document.querySelector(".win-modal-window");
+
+const overlay = document.querySelector(".overlay");
+
+const modal_score = document.querySelector(".win-modal-score");
+
+const loose_modal = document.querySelector(".loose-modal-window");
+
+const loose_number = document.querySelector(".loose-modal-number");
+
+let totalScore = 5;
 
 check_button.addEventListener("click", function () {
   let my_number = Number(document.querySelector(".your-number").value);
@@ -25,12 +37,16 @@ check_button.addEventListener("click", function () {
 
   changeScore(my_number);
 
-  changeBackground(my_number);
+  youWon(my_number);
 
   youLoose(totalScore);
 });
 
-again_button.addEventListener("click", function () {
+win_again_button.addEventListener("click", function () {
+  location.reload();
+});
+
+loose_again_button.addEventListener("click", function () {
   location.reload();
 });
 
@@ -57,16 +73,18 @@ function changeScore(my_number) {
   }
 }
 
-function changeBackground(my_number) {
+function youWon(my_number) {
   if (my_number === random_number) {
-    container.classList.add("changeBackground");
-    title.textContent = "Correct!!!";
+    win_modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+    modal_score.textContent = totalScore;
   }
 }
 
 function youLoose(totalScore) {
   if (totalScore === 0) {
-    title.textContent = "You Loose!!!";
-    container.classList.add("youLoose");
+    loose_modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+    loose_number.textContent = random_number;
   }
 }

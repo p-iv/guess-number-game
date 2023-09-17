@@ -24,8 +24,6 @@
       </div>
 
       <div class="container">
-        <button class="again-button button">Again!</button>
-
         <div class="input-container">
           <input type="number" class="your-number" />
           <button class="check-button button">Check!</button>
@@ -35,10 +33,32 @@
           <p class="result">in progress...</p>
           <p class="text_score">
             your score is:
-            <span class="score">10</span>
+            <span class="score">5</span>
           </p>
         </div>
       </div>
+      <div class="win-modal-window hidden">
+        <h1 class="win-modal-title">Correct!!!</h1>
+        <p class="win-modal-text">
+          your score:
+          <span class="win-modal-score"> 10 </span>
+        </p>
+        <button class="win-again-button">Again</button>
+      </div>
+
+      <div class="loose-modal-window hidden">
+        <h1 class="loose-modal-title">You Loose</h1>
+        <p class="loose-modal-text">
+          correct number:
+          <span class="loose-modal-number"> 0 </span>
+        </p>
+        <button class="loose-again-button">Again</button>
+      </div>
+
+      <div class="modal-info-window">
+        <h1 class="info-title"></h1>
+      </div>
+      <div class="overlay hidden"></div>
     </div>
   </body>
 </html>
