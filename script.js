@@ -28,6 +28,14 @@ const loose_modal = document.querySelector(".loose-modal-window");
 
 const loose_number = document.querySelector(".loose-modal-number");
 
+const start_button = document.querySelector(".start-button");
+
+const info_window = document.querySelector(".modal-info-window");
+
+const info_button = document.querySelector(".info-button");
+
+const close_button = document.querySelector(".close-button");
+
 let totalScore = 5;
 
 check_button.addEventListener("click", function () {
@@ -48,6 +56,21 @@ win_again_button.addEventListener("click", function () {
 
 loose_again_button.addEventListener("click", function () {
   location.reload();
+});
+
+start_button.addEventListener("click", function () {
+  info_window.classList.add("hidden");
+  overlay.classList.add("hidden");
+});
+
+close_button.addEventListener("click", function () {
+  info_window.classList.add("hidden");
+  overlay.classList.add("hidden");
+});
+
+info_button.addEventListener("click", function () {
+  info_window.classList.remove("hidden");
+  overlay.classList.remove("hidden");
 });
 
 function checkResult(my_number) {

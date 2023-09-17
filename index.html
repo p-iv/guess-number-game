@@ -16,6 +16,7 @@
 
   <body>
     <div class="main-container">
+      <button class="info-button"><b>i</b></button>
       <h1 class="title">Guess My Number!</h1>
 
       <p class="text">From 1 to 20</p>
@@ -55,8 +56,25 @@
         <button class="loose-again-button">Again</button>
       </div>
 
-      <div class="modal-info-window">
-        <h1 class="info-title"></h1>
+      <div class="modal-info-window hidden">
+        <button class="close-button">&times;</button>
+        <h1 class="info-title">Welcome!</h1>
+        <p class="info-text">
+          It's guess number game<br><br>
+          <h3>description:</h3><br><br>
+          Pretty simple game<br>
+          You just need to guess a hidden number<br><br>
+          <h3>Rules:</h3><br><br>
+          You have 5 points at start<br>
+          If you chose a <span class="wrong">wrong</span> number<br>
+          You will loose a point<br><br>
+          If you guessed <span class="correct">correct</span> number<br>
+          You will get 5 points<br>
+          And you won<br><br>
+          If your score is equal 0<br>
+          You loose
+        </p>
+        <button class="start-button">Start</button>
       </div>
       <div class="overlay hidden"></div>
     </div>
