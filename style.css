@@ -227,13 +227,15 @@
 .info-button {
   border: 0;
   position: relative;
-  right: 360px;
+  right: 365px;
   top: 35px;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   font-size: 1.2rem;
   background-color: #202020;
   color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 .info-button:hover {
   background-color: #ffffff;
